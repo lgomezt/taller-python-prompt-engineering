@@ -23,10 +23,9 @@ taller-python-prompt-engineering/
 
 | Archivo | Filas | Columnas | Descripción |
 |---|---|---|---|
-| `data/admissions.csv` | 157 | 8 | Registros de admisión con `Student_ID` añadido. Incluye datos "sucios" a propósito: valores faltantes, edades negativas, porcentajes fuera de rango, nombres duplicados. |
-| `data/bmi.csv` | 34,605 | 6 | Medidas antropométricas (altura, peso, edad, género) con `Student_ID`. Solo ~111 IDs coinciden con admisiones — el resto son registros de una cohorte externa. |
+| `data/admissions.csv` | 157 | 8 | Registros de admisión con `Student_ID` añadido. |
+| `data/bmi.csv` | 34,605 | 6 | Medidas antropométricas (altura, peso, edad, género) con `Student_ID` |
 
-**Relación entre ambos**: se unen por la columna `Student_ID`. De los 157 estudiantes de admisión, aproximadamente 111 tienen match en BMI. Los estudiantes restantes (con datos sucios de *gender* o *age*) no tienen match — es parte del ejercicio descubrir por qué.
 
 ## ⚠️ Nota importante sobre los datos
 
@@ -42,20 +41,11 @@ Ver la sección 6 del notebook `notebooks/01_Intro_Git_GitHub.ipynb` para la dis
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/TU_USUARIO/taller-python-prompt-engineering.git
+   git clone https://github.com/lgomezt/taller-python-prompt-engineering
    cd taller-python-prompt-engineering
    ```
-
-2. Instalar dependencias:
-   ```bash
-   pip install jupyterlab pandas numpy
-   ```
-
-3. Abrir el notebook:
+   
+2. Abrir el notebook:
    ```bash
    jupyter lab notebooks/01_Intro_Git_GitHub.ipynb
    ```
-
-## Licencia y uso
-
-Material educativo — Universidad de los Andes, Maestría en Economía.
