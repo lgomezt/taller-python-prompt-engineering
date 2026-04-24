@@ -1,0 +1,78 @@
+# ============================================================
+# .gitignore -- Clase 11 taller-python-prompt-engineering
+# ============================================================
+
+# ---------- Archivos SOLO DEL AUTOR (no para estudiantes) ----------
+# Scripts internos (generan datos, publican el repo, etc.)
+/scripts/
+
+# Datasets originales (raw) -- los estudiantes solo necesitan los procesados
+/data/BMI Dataset.csv
+/data/student_admission_record_dirty.csv
+
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ---------- Entornos virtuales ----------
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# ---------- IDE / editores ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+.aider*
+
+# ---------- Sistema operativo ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+._*
+
+# ---------- Logs y temporales ----------
+*.log
+*.tmp
+*.bak
+
+# ---------- Secretos y credenciales ----------
+# NUNCA subir llaves ni credenciales
+.env
+.env.local
+*.pem
+*.key
+credentials.json
+secrets.yaml
