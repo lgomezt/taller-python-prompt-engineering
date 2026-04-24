@@ -16,6 +16,11 @@
 # tutorial. Esa copia es personal (puede modificarla) y no se comitea.
 AGENTS.md
 
+# ---------- Notebooks-solucion (preview para el profesor) ----------
+# Estos son los notebooks ejecutados que muestran el output esperado
+# de las recetas-prompt. NO para estudiantes.
+/.solutions/
+
 
 # ---------- Outputs generados por el estudiante con Cursor ----------
 # La carpeta outputs/ EXISTE en el repo (con .gitkeep) pero los
