@@ -11,6 +11,18 @@
 /data/student_admission_record_dirty.csv
 
 
+# ---------- Outputs generados por el estudiante con Cursor ----------
+# La carpeta outputs/ EXISTE en el repo (con .gitkeep) pero los
+# artefactos que genere el estudiante no se comitean al repo central.
+# Cada estudiante corre su propio analisis y decide si sube outputs
+# a su fork si quisiera.
+/outputs/*
+!/outputs/.gitkeep
+!/outputs/figures/
+/outputs/figures/*
+!/outputs/figures/.gitkeep
+
+
 # ---------- Python ----------
 __pycache__/
 *.py[cod]
