@@ -11,12 +11,15 @@ En esta sesión introducimos **Git y GitHub** como herramientas de trabajo, y de
 ```
 taller-python-prompt-engineering/
 ├── README.md                              <- este archivo
-├── AGENTS.md                              <- contexto para el agente IA (Cursor, etc.)
+├── AGENTS_TEMPLATE.md                     <- template del contexto para el agente
 ├── .gitignore
 ├── notebooks/
 │   ├── 01_Intro_Git_GitHub.ipynb          <- Parte 1: Git/GitHub + tutorial practico
 │   ├── 02_Tutorial_Cursor.ipynb           <- Parte 2: tutorial narrativo (el que lees)
-│   └── 03_Analisis_Admisiones.ipynb       <- Parte 2: notebook de trabajo (donde Cursor escribe)
+│   ├── 03_EDA.ipynb                       <- Seccion 1: exploracion
+│   ├── 04_Limpieza.ipynb                  <- Seccion 2: limpieza + merge
+│   ├── 05_Modelado.ipynb                  <- Seccion 3: modelado con Plan Mode
+│   └── 06_Reporte.ipynb                   <- Seccion 4: reporte final
 ├── data/                                  <- INMUTABLE
 │   ├── admissions.csv                     <- base de admisiones (con Student_ID, aun sucia)
 │   └── bmi.csv                            <- datos antropometricos (con Student_ID)
@@ -31,12 +34,17 @@ taller-python-prompt-engineering/
    - Instalar Git en Mac/Windows.
    - Clonar este repo.
 
-2. **Parte 2 — Prompt engineering con Cursor** (`notebooks/02_Tutorial_Cursor.ipynb`):
+2. **Parte 2 — Prompt engineering con Cursor** (`notebooks/02_Tutorial_Cursor.ipynb` + los notebooks `03_EDA` → `06_Reporte`):
    - Instalar Cursor.
    - El prompt ingenuo vs el prompt bueno.
-   - AGENTS.md y el harness.
-   - Las tres recetas-prompt: **exploración**, **limpieza**, **modelado con Plan Mode**.
-   - Se trabaja sobre `notebooks/03_Analisis_Admisiones.ipynb`.
+   - `AGENTS_TEMPLATE.md` y el harness (+ cómo activar `AGENTS.md`).
+   - Las tres recetas-prompt:
+     - **exploración** en `03_EDA.ipynb`
+     - **limpieza + merge** en `04_Limpieza.ipynb`
+     - **modelado con Plan Mode** en `05_Modelado.ipynb`
+   - Reporte ejecutivo en `06_Reporte.ipynb`.
+
+> **Nota pedagógica**: dividimos el análisis en 4 notebooks a propósito. Un archivo = un *concern* es buena práctica de ciencia de datos: cada notebook lee los outputs intermedios del anterior y escribe los suyos en `outputs/`. Esto hace más manejable el análisis, fácil de debugear y fácil de iterar por secciones.
 
 ## Datasets — resumen rápido
 
@@ -45,7 +53,7 @@ taller-python-prompt-engineering/
 | `data/admissions.csv` | 157 | 8 | Registros de admisión con `Student_ID` añadido. Incluye datos "sucios" a propósito: valores faltantes, edades negativas, porcentajes fuera de rango. |
 | `data/bmi.csv` | 34,605 | 6 | Medidas antropométricas (altura, peso, edad, género) con `Student_ID`. Solo ~111 IDs coinciden con admisiones; el resto tienen prefijo `EXT_` (cohorte externa). |
 
-Llave de join: `Student_ID`. Ver `AGENTS.md` para detalles.
+Llave de join: `Student_ID`. Ver `AGENTS_TEMPLATE.md` para detalles.
 
 ## ⚠️ Nota importante sobre los datos
 
@@ -70,12 +78,11 @@ Ver la sección 6 del notebook `notebooks/01_Intro_Git_GitHub.ipynb` para la dis
    pip install jupyterlab pandas numpy matplotlib seaborn scikit-learn statsmodels pyarrow
    ```
 
-3. Abrir los notebooks:
+3. Abrir los notebooks y Cursor:
    ```bash
    jupyter lab notebooks/
    ```
-
-4. Abrir el mismo folder en **Cursor** para la Parte 2.
+   Y en paralelo abrir la misma carpeta en **Cursor** para la Parte 2.
 
 ## Licencia y uso
 

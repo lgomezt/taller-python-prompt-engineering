@@ -1,6 +1,23 @@
+<!--
+==============================================================
+ESTE ARCHIVO ES UN TEMPLATE. NO esta activo para el agente.
+Cursor / Claude Code / Antigravity reconocen unicamente
+archivos llamados exactamente `AGENTS.md` (o `CLAUDE.md` para
+Claude Code).
+
+Para activarlo: segui el Paso 6 del tutorial
+notebooks/02_Tutorial_Cursor.ipynb, donde te vamos a pedir
+que hagas:
+
+    cp AGENTS_TEMPLATE.md AGENTS.md
+
+Y a partir de ese momento el agente lee el contexto automatico.
+==============================================================
+-->
+
 # AGENTS.md — Taller de Prompt Engineering para Data Science
 
-Este archivo le da contexto persistente al agente (Cursor, Claude Code, Antigravity, Codex, etc.) cada vez que arranca una sesión en este repo. **Está escrito a mano**: la evidencia empírica (2026) muestra que los AGENTS.md auto-generados por LLM degradan la performance del agente en 5 de 8 configuraciones.
+Este archivo le da contexto persistente al agente (Cursor, Claude Code, Antigravity, Codex, etc.) cada vez que arranca una sesión en este repo.
 
 ## Proyecto
 

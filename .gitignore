@@ -11,6 +11,12 @@
 /data/student_admission_record_dirty.csv
 
 
+# ---------- AGENTS.md (creado por el estudiante al copiar el TEMPLATE) ----------
+# El estudiante va a hacer `cp AGENTS_TEMPLATE.md AGENTS.md` durante el
+# tutorial. Esa copia es personal (puede modificarla) y no se comitea.
+AGENTS.md
+
+
 # ---------- Outputs generados por el estudiante con Cursor ----------
 # La carpeta outputs/ EXISTE en el repo (con .gitkeep) pero los
 # artefactos que genere el estudiante no se comitean al repo central.
