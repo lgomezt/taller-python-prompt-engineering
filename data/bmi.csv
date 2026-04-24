@@ -1,4 +1,4 @@
-Student_ID;gender;measurement_code;height_m;weight_kg;age
+Student_ID;sex;steps;height_m;weight_kg;age
 EXT_00001;female;13818.75;1.8169362631532384;64.68902234486215;38
 EXT_00002;female;11643.75;1.785934844685866;86.1539568052992;51
 EXT_00003;male;10368.75;1.7963627748619693;62.26788704484092;43

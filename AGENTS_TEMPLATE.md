@@ -32,7 +32,7 @@ Los datos viven en `./data/` y son **inmutables** — nunca los sobrescribas.
 | Archivo | Separador | Filas | Columnas clave | Nota |
 |---|---|---|---|---|
 | `data/admissions.csv` | `,` | 157 | `Student_ID` (llave primaria), `Name`, `Age`, `Gender`, `Admission Test Score`, `High School Percentage`, `City`, `Admission Status` | Datos sucios a propósito: NAs, edades negativas, porcentajes fuera de rango. |
-| `data/bmi.csv` | `;` | 34,605 | `Student_ID` (FK), `gender`, `measurement_code`, `height_m`, `weight_kg`, `age` | ~111 `Student_ID` matchean con admissions. El resto son `EXT_*` (no sirven para este análisis). |
+| `data/bmi.csv` | `;` | 34,605 | `Student_ID` (FK), `sex`, `steps`, `height_m`, `weight_kg`, `age` | ~111 `Student_ID` matchean con admissions. El resto son `EXT_*` (no sirven para este análisis). |
 
 La llave de join es `Student_ID`. `admissions` es la base — usamos LEFT JOIN desde admissions ← bmi.
 
@@ -99,6 +99,6 @@ python -c "import pandas as pd; print(pd.read_parquet('outputs/analysis_clean.pa
 
 ## Lo que NO sabes sin leer el código
 
-- La columna `measurement_code` de bmi.csv **no tiene uso definido** — es probablemente ruido. Sugiere descartarla, no inventes interpretación.
+- La columna `steps` de bmi.csv es el numero de pasos que la persona dio el domingo pasado (proxy de actividad fisica).
 - Los `Student_ID` con prefijo `EXT_*` **no pertenecen a admissions**. Son registros sobrantes de una cohorte externa.
 - El profesor generó los datos con un script (`scripts/prepare_datasets.py`) que está gitignored — no lo busques, no lo necesitas.
