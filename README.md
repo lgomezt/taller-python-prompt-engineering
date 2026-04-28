@@ -69,7 +69,7 @@ Ver la sección 6 del notebook `notebooks/01_Intro_Git_GitHub.ipynb` para la dis
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/TU_USUARIO/taller-python-prompt-engineering.git
+   git clone https://github.com/lgomezt/taller-python-prompt-engineering.git
    cd taller-python-prompt-engineering
    ```
 
